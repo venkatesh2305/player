@@ -1,24 +1,24 @@
 #include <stdio.h>
 int main()
 {
-	int n,a[10],k,temp=0,i,j;
+	int n,s[10],k,temp=0,i,j;
 	scanf("%d %d\n",&n,&k);
 	for(i=0;i<n;i++)
 	{
-	    scanf("%d",&a[i]);
+	    scanf("%d",&s[i]);
 	}
 	for(i=0;i<k;i++)
 	{
-	    temp=a[n-1];
+	    temp=s[n-1];
 	    for(j=n-1;j>=0;j--)
 	    {
-	       a[j]=a[j-1];
+	       s[j]=s[j-1];
 	    }
-	    a[0]=temp;
+	    s[0]=temp;
 	}
 	for(i=0;i<n;i++)
 	{
-	    printf("%d ",a[i]);
+	    printf("%d ",s[i]);
 	}
 	return 0;
 }
